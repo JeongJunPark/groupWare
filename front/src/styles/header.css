@@ -1,0 +1,105 @@
+
+
+.mypage_header { 
+    position: relative;
+    /* 하위 메뉴를 absolute로 띄우기 위한 기준 */
+    height: 40px;
+    /* 디폴트 높이 */
+    line-height: 40px;
+    padding: 0 16px;
+    /* background-color: rgba(255,255,255,255.0.2); */
+    background: #333;
+    color: #a3a3a3;
+    /* border: 1px solid #ddd; */
+    cursor: pointer;
+    align-items: center;
+}
+
+/* PC용 메뉴 */
+.desktop-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-container { 
+    display: flex; 
+    gap: 20px;
+     /* 메뉴 아이템 간격 */ 
+    padding: 10px 20px;
+    background-color: #333;
+    color: #a3a3a3; font-size: 14px;
+    align-items: center; 
+    /* 세로 가운데 */
+    cursor: pointer;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 줄어들면 자동 줄바꿈 */
+    overflow: hidden;     /* 삐져나오는 부분 숨김 */
+    text-overflow: ellipsis; /* ... 처리 */
+    white-space: nowrap;  /* 줄바꿈 방지 */    
+} 
+
+.menu-left {
+  display: flex;
+  gap: 20px; /* 왼쪽 메뉴 아이템 간격 */
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+}
+
+
+.mobile-menu-btn {
+  display: none;
+}
+
+/* 오른쪽 끝 메뉴 */
+.user-menu {
+  margin-left: auto; /* 이걸 주면 오른쪽 끝으로 밀림 */
+}
+
+/* 마우스 올렸을 때 */
+.mypage_header:hover {
+  color: whitesmoke; /* 글씨 색도 바꿔주면 보기 좋음 */
+}
+
+.mypage_header.active {
+  color: #0069a6;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 18x;
+}
+
+/* Dropdown 기본 */
+.custom-dropdown .ant-dropdown-menu {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+/* 기본 아이템 */
+.custom-dropdown .ant-dropdown-menu-item {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+/* hover 상태 */
+.custom-dropdown .ant-dropdown-menu-item:hover {
+  /* background-color: #a3a3a3 !important; */
+  color: #0069a6 !important;
+}
+
+
+/* 모바일 화면에서는 desktop-menu + user-menu 숨기고 햄버거 버튼만 보이게 */
+@media (max-width: 768px) {
+  .desktop-menu,
+  .user-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-block;
+    margin-left: auto;
+    color: white;
+  }
+}

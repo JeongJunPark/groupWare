@@ -1,0 +1,35 @@
+/* mail-specific styles (예: src/styles/mail.css) */
+.mail-page {
+  display: flex;
+  height: 100%;
+}
+
+.mail-sidebar {
+  width: 220px;
+  background: #f5f6fa;
+  border-right: 1px solid #e5e7eb;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.mail-sidebar-item {
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.mail-sidebar-item:hover {
+  background: #eef2f7;
+}
+
+.mail-sidebar-item.active {
+  background: #e6f0ff;
+  font-weight: 600;
+}
+
+.mail-content {
+  flex: 1;
+  padding: 16px;
+  box-sizing: border-box;
+}

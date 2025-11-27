@@ -1,0 +1,86 @@
+.sidebar {
+  width: 100px;
+  background-color: #2d2d2d;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  transition: width 0.3s ease;  
+  overflow: hidden;
+}
+
+.sidebar-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 12px;
+  text-align: left;
+  transition: background 0.2s;
+  position: relative;
+}
+
+
+.sidebar-item:hover {
+  background-color: #444;
+  color: white;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-item span {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  position: absolute;
+  left: 40px; 
+
+}
+
+
+.sidebar.collapsed .sidebar-item span {
+  opacity: 0;
+  transform: translateY(12px); /* 아래로 부드럽게 내려가듯 숨김 */
+  pointer-events: none;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-logo img {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.sidebar-item a {
+  color: white; /* 기본 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.sidebar-item a:hover {
+  color: white; /* hover 색상 */
+}

@@ -1,0 +1,45 @@
+.loginInput {
+  transition: 0.5s ease-in-out;
+  border: 1px solid #d9d9d9 !important;
+  padding: 17px;
+  border-radius: 8px;
+  color: rgba(0,0,0) !important;
+  font-size: 15px;
+}
+
+.login_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0; /* 반투명 검정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_box {
+  background-color: #ffe89b; /* 연한 회색 */
+  width: 800px;     /* 정사각형 느낌을 위해 너비와 높이 비슷하게 */
+  height: 400px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 중앙 정렬 */
+  gap: 20px;
+}
+
+.login_icon {
+  display: flex;
+  justify-content: left; 
+  align-items: left;     
+  margin-bottom: 20px;     /* 아래 폼과 간격 */
+}
+
+
+.login_wrap div {
+  margin: 0 auto;
+}
